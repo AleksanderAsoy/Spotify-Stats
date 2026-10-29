@@ -1,0 +1,112 @@
+/* ========================================
+   GLOBAL CSS VARIABLES AND ROOT STYLES
+   ======================================== */
+
+/* CSS Custom Properties (CSS Variables) - Global styling definitions */
+:root {
+  /* Typography - System font stack for optimal performance and consistency */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5; /* Improved readability with 1.5x line spacing */
+  font-weight: 400; /* Normal font weight */
+
+  /* Color Scheme - Supports both light and dark modes */
+  color-scheme: light dark; /* Tells browser this site supports both themes */
+  color: rgba(255, 255, 255, 0.87); /* Default dark mode text color (87% opacity white) */
+  background-color: #242424; /* Default dark mode background */
+
+  /* Font Optimization - Better text rendering */
+  font-synthesis: none; /* Prevents browser from creating bold/italic versions */
+  text-rendering: optimizeLegibility; /* Optimizes text for readability */
+  -webkit-font-smoothing: antialiased; /* Smooth fonts on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smooth fonts on Firefox macOS */
+}
+
+/* ========================================
+   LINK STYLES
+   ======================================== */
+
+/* Base link styling */
+a {
+  font-weight: 500; /* Medium font weight for links */
+  color: #646cff; /* Vite's signature blue color */
+  text-decoration: inherit; /* Inherits text decoration from parent */
+}
+
+/* Link hover state */
+a:hover {
+  color: #535bf2; /* Slightly darker blue on hover */
+}
+
+/* ========================================
+   BODY STYLES
+   ======================================== */
+
+/* Main body element styling */
+body {
+  margin: 0; /* Remove default browser margins */
+  display: flex; /* Flexbox layout for centering */
+  place-items: center; /* Centers content both horizontally and vertically */
+  min-width: 320px; /* Minimum width for mobile devices */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* ========================================
+   HEADING STYLES
+   ======================================== */
+
+/* Main heading (h1) styling */
+h1 {
+  font-size: 3.2em; /* Large heading size */
+  line-height: 1.1; /* Tighter line spacing for large text */
+}
+
+/* ========================================
+   BUTTON STYLES
+   ======================================== */
+
+/* Base button styling */
+button {
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid transparent; /* Transparent border for smooth transitions */
+  padding: 0.6em 1.2em; /* Vertical and horizontal padding */
+  font-size: 1em; /* Normal font size */
+  font-weight: 500; /* Medium font weight */
+  font-family: inherit; /* Inherits font from parent */
+  background-color: #1a1a1a; /* Dark background for dark mode */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: border-color 0.25s; /* Smooth border color transition */
+}
+
+/* Button hover state */
+button:hover {
+  border-color: #646cff; /* Blue border on hover */
+}
+
+/* Button focus states for accessibility */
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color; /* Browser's default focus ring */
+}
+
+/* ========================================
+   LIGHT MODE STYLES
+   ======================================== */
+
+/* Media query for users who prefer light color scheme */
+@media (prefers-color-scheme: light) {
+  /* Override root variables for light mode */
+  :root {
+    color: #213547; /* Dark text for light backgrounds */
+    background-color: #ffffff; /* White background */
+  }
+  
+  /* Light mode link hover color */
+  a:hover {
+    color: #747bff; /* Slightly different blue for light mode */
+  }
+  
+  /* Light mode button background */
+  button {
+    background-color: #f9f9f9; /* Light gray background */
+  }
+}
